@@ -1,0 +1,45 @@
+header
+{
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    background-color: #495E57;
+}
+.header-container-width
+{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-h1
+{
+    font-size: 64px;
+    font-weight: medium;
+    margin-bottom: 0px;
+    color: #F4CE14;
+}
+
+.header-h2
+{
+    margin-top: 0px;
+    font-size: 50px;
+    color: #EDEFEE;
+}
+
+.header-p
+{
+    max-width: 50%;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #EDEFEE;
+    margin-bottom: 60px;
+}
+
+.header-image
+{
+    margin-top: 60px;
+    border-radius: 20px;
+    width: 500px;
+}
