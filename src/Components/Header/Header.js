@@ -12,7 +12,7 @@ function Header() {
             <Button text="Reserve a table" />
           </div>
           <div>
-            <img src={require("../../Assets/restauranfood.jpg")} alt = "Restaurant Food" width={400} height={500} className='header-image'></img>
+            <img src={require("../../Assets/restauranfood.jpg")} alt = "Restaurant Food" width={400} height={400} className='header-image'></img>
           </div>
       </div>
     </header>

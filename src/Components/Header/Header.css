@@ -2,7 +2,7 @@ header
 {
     display: flex;
     justify-content: center;
-    height: 30rem;
+    height: 25rem;
     background-color: #495E57;
 }
 .header-container-width
@@ -23,23 +23,21 @@ header
 .header-h2
 {
     margin-top: 0px;
-    font-size: 50px;
+    font-size: 40px;
     color: #EDEFEE;
 }
 
 .header-p
 {
     max-width: 50%;
-    padding-top: 10px;
     font-size: 18px;
     font-weight: bold;
     color: #EDEFEE;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .header-image
 {
     margin-top: 60px;
     border-radius: 20px;
-    width: 500px;
 }
