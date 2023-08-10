@@ -4,7 +4,6 @@ function BookingForm(props) {
   const onDateChange = (e) => {
     props.setDate(e.target.value)
     const newTimes = props.updateTimes(e.target.value)
-    console.log(newTimes)
     props.dispatch({type: 'update', payload: newTimes})
   }
   return (
