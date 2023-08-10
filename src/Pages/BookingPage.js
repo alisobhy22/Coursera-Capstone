@@ -3,29 +3,30 @@ import Nav from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
 import './BookingPage.css'
 import BookingForm from '../Components/BookingForm/BookingForm'
-import { useState, useReducer } from 'react'
+import { useState, useReducer, useEffect } from 'react'
+import { fetchAPI,submitAPI } from '../API'
 
 const availabletimesReducer = (state, action)=> {
   switch (action.type) {
     case 'update':
       return action.payload
-    case 'initialize':
-      return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00']
     default:
       throw new Error()
   }
 }
 
-const initializeTimes = () => {
-  return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00']
-}
 
 const updateTimes = (selectedDate) => {
-  if (selectedDate === '2023-08-01')
-    return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00','24:00']
-  else
-    return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00']
+  const date = new Date(selectedDate)
+  const times = fetchAPI(date)
+  return times
 };
+
+const initializeTimes = () => {
+  const date = new Date()
+  const times = fetchAPI(date)
+  return times
+}
 
 function BookingPage() {
 
@@ -37,15 +38,22 @@ function BookingPage() {
 
 
 
-  
 
   const onsubmit = (e) => {
     e.preventDefault()
-    console.log('submitted')
-    console.log(date)
-    console.log(time)
-    console.log(guests)
-    console.log(occasion)
+    const formData = {
+      date,
+      time,
+      guests,
+      occasion
+    }
+    const result = submitAPI(formData)
+    if (result) {
+      alert('Booking successful')
+    }
+    else {
+      alert('Booking failed')
+    }
   }
 
 
