@@ -22,15 +22,9 @@ const initializeTimes = () => {
 
 const updateTimes = (selectedDate) => {
   if (selectedDate === '2023-08-01')
-  {
-    console.log('date is 2023-08-01')
     return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00','24:00']
-  }
   else
-  {
-    console.log('date is not 2023-08-01')
     return ['17:00','18:00','19:00','20:00','21:00','22:00','23:00']
-  }
 };
 
 function BookingPage() {
